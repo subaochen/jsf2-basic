@@ -1,0 +1,56 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee"
+         xsi:schemaLocation="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.0">
+  <!-- The bare minimum needed for JSF 2.2 is a servlet 2.5 or later
+       declaration (this uses 3.0) and the mapping for the FacesServlet.
+       Setting PROJECT_STAGE to Development is highly recommended
+       during initial development so that you get more helpful
+       error messages. Whether you want server-side state saving
+       (default) or client-side is a more complicated question:
+       client-side uses more bandwidth but fewer server resources.
+       Client-side also helps to avoid the dreaded view expired exceptions.
+
+       From JSF 2 and PrimeFaces tutorial
+       at http://www.coreservlets.com/JSF-Tutorial/jsf2/
+  -->
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+  </servlet>
+
+  <!-- Map these files with JSF -->
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.faces</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+
+  <!-- If you go to http://host/project/ (with no file name), it will
+     try index.jsf first, welcome.jsf next, and so forth.
+ -->
+  <welcome-file-list>
+    <welcome-file>index.jsf</welcome-file>
+    <welcome-file>welcome.jsf</welcome-file>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
