@@ -9,7 +9,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.faces:javax.faces-api:2.2" level="project" />
+    <orderEntry type="library" name="Maven: javax.faces:javax.faces-api:2.2" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
   </component>
 </module>
